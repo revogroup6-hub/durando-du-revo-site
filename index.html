@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Durando Consulting — Portail</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Durando — Portail Du & Rev'O</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles.css">
-    <meta name="description" content="Portail d'accueil — Choisissez votre parcours: Meet Du (profil, blog, speaking) ou Explore Rev'O (services, pricing, conversion).">
+    <meta name="description" content="Choisissez votre expérience: Meet Du (profil, blog, speaking) ou Explore Rev'O (services, ROI, pricing).">
 </head>
 <body>
     <header class="site-header">
         <div class="container navbar">
-            <a class="logo" href="/">Durando</a>
+            <a class="logo" href="#">Durando</a>
             <nav class="nav-links">
                 <a href="du/">Du</a>
                 <a href="revo/">Rev'O</a>
@@ -21,81 +21,124 @@
     </header>
 
     <section class="hero">
+        <div class="bg-gradient"></div>
+        <div class="parallax-layer layer-1 floaty"></div>
+        <div class="parallax-layer layer-2 floaty" style="animation-delay:.8s"></div>
+        <div class="container intro">
+            <div class="glass reveal">
+                <div class="badge du">Portail d'accueil</div>
+                <h1>Deux univers, une vision: <span style="background:linear-gradient(90deg,#60a5fa,#a78bfa,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">impact mesurable</span></h1>
+                <p class="lead">Choisissez votre parcours: networking & expertise personnelle, ou solutions business & ROI.</p>
+                <div class="space">
+                    <a class="cta du" href="#quiz">Commencer</a>
+                    <a class="cta ghost" href="du/">Découvrir Du</a>
+                    <a class="cta ghost" href="revo/">Explorer Rev'O</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="section">
         <div class="container">
-            <div class="card">
-                <div class="center">
-                    <div class="badge du">Portail d'accueil</div>
-                    <h1 style="margin: 8px 0 6px;">Choisissez votre parcours</h1>
-                    <p class="section-subtitle center" style="margin: 0 auto 20px;">Quel est votre objectif aujourd'hui ? Networking & expertise personnelle, ou solutions business & ROI.</p>
+            <div class="center">
+                <h2 class="h2">Trouvons votre parcours</h2>
+                <p class="subtitle">Un mini-quiz pour vous orienter intelligemment</p>
+            </div>
+            <div class="quiz reveal">
+                <div class="quiz-header">
+                    <strong>Question 1/1</strong>
+                    <div class="progress"><div class="bar" style="width: 20%"></div></div>
                 </div>
-
-                <div class="grid grid-2" style="margin-top: 12px;">
-                    <div class="card" style="background: rgba(44,95,143,0.05); border: 1px solid #cfe4f2; cursor: pointer;" id="networking-option">
-                        <div style="display:flex; align-items:center; gap:10px;">
-                            <div style="width:20px; height:20px; border: 2px solid #4A90B8; border-radius: 50%; display:flex; align-items:center; justify-content:center;">
-                                <div id="networking-dot" style="width:10px; height:10px; background:#4A90B8; border-radius:50%; opacity:0;"></div>
-                            </div>
+                <div class="options">
+                    <div class="option" data-value="networking" id="networking-option">
+                        <div class="radio"><div class="dot"></div></div>
+                        <div>
                             <strong>🤝 Networking & Expertise personnelle</strong>
+                            <div class="muted">Rencontrer Du, parcours, vision, articles</div>
                         </div>
-                        <p class="muted" style="margin:10px 0 0;">Rencontrer Du, découvrir le parcours, la vision et les articles.</p>
                     </div>
-                    <div class="card" style="background: rgba(255,140,0,0.06); border: 1px solid #ffd5a3; cursor: pointer;" id="business-option">
-                        <div style="display:flex; align-items:center; gap:10px;">
-                            <div style="width:20px; height:20px; border: 2px solid #FFB84D; border-radius: 50%; display:flex; align-items:center; justify-content:center;">
-                                <div id="business-dot" style="width:10px; height:10px; background:#FFB84D; border-radius:50%; opacity:0;"></div>
-                            </div>
+                    <div class="option" data-value="business" id="business-option">
+                        <div class="radio"><div class="dot" style="background:#f59e0b"></div></div>
+                        <div>
                             <strong>🚀 Solutions business & ROI</strong>
+                            <div class="muted">Rev'O: services, cas d'usage, pricing, conversion</div>
                         </div>
-                        <p class="muted" style="margin:10px 0 0;">Explorer Rev'O: services, cas d'usage, process, pricing et conversion.</p>
                     </div>
                 </div>
-
-                <div class="center" style="margin-top: 18px;">
-                    <button id="orientation-cta" class="cta" style="opacity:.5;" disabled>Continuer</button>
+                <div class="quiz-actions">
+                    <button class="cta du" id="orientation-cta" disabled style="opacity:.6">Continuer</button>
                 </div>
+                <div class="result" aria-live="polite"></div>
             </div>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <div class="center">
-                <h2>Ou explorez directement</h2>
-                <p class="section-subtitle center" style="margin: 0 auto 24px;">Accès rapide aux deux univers</p>
-            </div>
             <div class="grid grid-2">
-                <div class="card" id="go-du" style="cursor:pointer;">
+                <div class="card-3d reveal"><div class="inner card" id="go-du" style="cursor:pointer;">
                     <div class="badge du">Du</div>
-                    <h3 style="margin:8px 0;">Meet Durando</h3>
-                    <p class="muted">Parcours, vision, articles & speaking</p>
-                    <div class="space-top"><span class="cta du">Découvrir Du</span></div>
-                </div>
-                <div class="card" id="go-revo" style="cursor:pointer;">
+                    <h3 class="h3" style="margin:8px 0;">Meet Durando</h3>
+                    <p class="muted">Storytelling personnel, vision et articles</p>
+                    <div class="space"><a class="cta du" href="du/">Découvrir Du</a></div>
+                </div></div>
+                <div class="card-3d reveal"><div class="inner card" id="go-revo" style="cursor:pointer;">
                     <div class="badge revo">Rev'O</div>
-                    <h3 style="margin:8px 0;">Business Solutions</h3>
-                    <p class="muted">Services, cas d'usage, process, pricing, conversion</p>
-                    <div class="space-top"><span class="cta revo">Explorer Rev'O</span></div>
-                </div>
+                    <h3 class="h3" style="margin:8px 0;">Business Solutions</h3>
+                    <p class="muted">Services, ROI, process, pricing et conversion</p>
+                    <div class="space"><a class="cta revo" href="revo/">Explorer Rev'O</a></div>
+                </div></div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="grid grid-3">
-                <div>
-                    <h3>Durando Consulting</h3>
-                    <p>Expertise • Innovation • Résultats</p>
-                </div>
-                <div>
-                    <h3>Parcours</h3>
-                    <p><a href="du/">Du</a> • <a href="revo/">Rev'O</a> • <a href="blog/">Blog</a></p>
-                </div>
-                <div>
-                    <h3>Contact</h3>
-                    <p><a href="mailto:contact@durando-consulting.com">contact@durando-consulting.com</a></p>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4 class="h3" style="margin:0 0 var(--space-2)">Durando Consulting</h4>
+                <div class="muted">Magazine digital d'expertise: IA, stratégie, carrière et ROI.</div>
+                <div class="newsletter space">
+                    <strong>Newsletter</strong>
+                    <div class="muted">Recevez 2 fois/mois des analyses utiles.</div>
+                    <form onsubmit="event.preventDefault(); alert('Merci !');">
+                        <input type="email" placeholder="Votre email" required>
+                        <button class="cta du" type="submit">S'abonner</button>
+                    </form>
+                    <div class="socials">
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="Twitter">x</a>
+                        <a href="#" aria-label="YouTube">▶</a>
+                    </div>
                 </div>
             </div>
+            <div class="footer-col">
+                <h4 class="h3">Services</h4>
+                <div class="footer-links">
+                    <a href="revo/#services">Automatisation IA</a>
+                    <a href="revo/#services">Consulting Carrière</a>
+                    <a href="revo/#services">Projet & Leadership</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="h3">À propos</h4>
+                <div class="footer-links">
+                    <a href="du/">Meet Du</a>
+                    <a href="blog/">Blog</a>
+                    <a href="#">Presse</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="h3">Légal</h4>
+                <div class="footer-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <div>© 2025 Durando — Tous droits réservés</div>
+            <div><a href="mailto:contact@durando-consulting.com" style="color:#cbd5e1; text-decoration:none;">contact@durando-consulting.com</a></div>
         </div>
     </footer>
 
